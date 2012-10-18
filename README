@@ -1,1 +1,8 @@
-Simple Poker Hands Kata without any suits, designed to promote descriptive readable test names
+Casual Poker Hands Kata
+====
+
+Casual poker hands is a Kata designed to promote descriptive readable test names.
+The 'Casual' part is a bad joke around the lack of suits in the kata.
+Cards purely have a numerical value, they don't belong to a suit.
+
+e.g. a full house may be represented as : 1, 1, 1, 2, 2
