@@ -1,8 +1,20 @@
+class Hand
+  attr_reader :rank
+
+  def initialize rank
+    @rank = rank
+  end
+
+  def beats other_hand
+    true
+  end
+end
+
 class PokerHandDetector
   def detect(cards)
     number_of_unique_cards = cards.uniq.size
 
-    case
+    rank = case
     when number_of_unique_cards < 3
       full_house?(cards) ? :full_house : :four_of_a_kind
     when number_of_unique_cards < 4
@@ -12,6 +24,7 @@ class PokerHandDetector
     else
       :high_card
     end
+    Hand.new(rank)
   end
 
   def full_house? cards
