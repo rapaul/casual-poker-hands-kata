@@ -27,6 +27,7 @@ class PokerHandDetector
     Hand.new(rank)
   end
 
+  private
   def full_house? cards
     unique_cards = cards.uniq
     cards.count(unique_cards[0]) > 1 && cards.count(unique_cards[1]) > 1
